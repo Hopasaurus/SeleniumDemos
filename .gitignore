@@ -1,0 +1,8 @@
+Fitnesse_SlimJs/FitNesseRoot/*.zip
+Fitnesse_SlimJs/FitNesseRoot/FitNesse/**
+Fitnesse_SlimJs/FitNesseRoot/files/testResults/*
+*.zip
+*.jar
+
+node_modules/*
+

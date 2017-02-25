@@ -1,0 +1,18 @@
+!define TEST_SYSTEM {slim}
+!define slim.port {9000}
+!define COMMAND_PATTERN {node "C:\Users\David Hoppe\AppData\Roaming\npm\node_modules\slimjs\src\SlimJS" %p}
+!path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures
+
+
+|import|
+|cint  |
+
+
+|check calculator                        |
+|first term|operation|second term|answer?|
+|1         |plus     |1          |2      |
+|1         |minus    |1          |0      |
+|8         |plus     |4          |12     |
+|9         |plus     |1          |10     |
+|4         |minus    |7          |error  |
+
