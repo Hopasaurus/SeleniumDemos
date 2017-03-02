@@ -1,0 +1,23 @@
+<div class="cart">
+  <span class="selected-element">this is a cart.</span>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Remove</th>
+    </tr>
+    <tr class="cart-detail" *ngFor="let order of order.summaryDetail">
+      <td class="cart-detailx">{{order.id}} {{order.itemId}}</td>
+      <td>{{order.item?.description}}</td>
+      <td>{{order.item?.price}}</td>
+      <td><input [(ngModel)]="order.quantity"></td>
+      <td><button (click)="remove(item)">Remove</button></td>
+    </tr>
+  </table>
+  <div class="cart-checkout">
+    Cart total  ${{order.total}}<br>
+    <button (click)="checkout()">Check out</button>
+  </div>
+</div>

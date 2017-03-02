@@ -1,0 +1,25 @@
+<div class="search-results-container">
+  <div *ngIf="loading">
+    Searching...
+  </div>
+  <div *ngIf="!loading">
+    <div *ngIf="searchTerm">
+      Displaying results matching: "{{searchTerm}}"
+    </div>
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Add to cart</th>
+      </tr>
+      <tr class="search-result-row" *ngFor="let item of items">
+        <td class="search-result-description">{{item.description}}</td>
+        <td class="search-result-price">{{item.price}}</td>
+        <td><button (click)="add(item)">Add to cart</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,47 @@
+
+.header-container {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row nowrap;
+
+  color: white;
+  background-color: #1c94c4;
+
+  justify-content: flex-start;
+
+  align-items: flex-start;
+  align-content: center;
+}
+
+.header-item {
+  margin: auto;
+  padding: 5px;
+  width: 25%;
+  flex: 0 1 auto;
+}
+
+.search-term {
+  width: 40%;
+}
+
+.search-label {
+  padding: 5px;
+}
+
+.search-results-container {
+  margin: auto;
+  width: 80%;
+  padding: .5em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

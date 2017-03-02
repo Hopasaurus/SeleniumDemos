@@ -1,0 +1,27 @@
+
+.cart {
+  margin: auto;
+  width: 80%;
+}
+
+.cart-detail {
+  border: 1px black solid;
+  padding: 50px;
+  margin: 10px;
+}
+
+.cart-checkout {
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

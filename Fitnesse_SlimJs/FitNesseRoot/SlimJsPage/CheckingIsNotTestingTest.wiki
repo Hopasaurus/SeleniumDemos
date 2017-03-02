@@ -4,9 +4,13 @@
 !path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures
 
 
+This is an import, it tells what file to get the fixtures from:
+
 |import|
 |cint  |
 
+
+This is a test fixture, it is the name of a "class" to run, the column headers are the names of functions to run with the data in from the rows:
 
 |check calculator                        |
 |first term|operation|second term|answer?|

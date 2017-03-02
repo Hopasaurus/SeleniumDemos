@@ -1,0 +1,17 @@
+<div class="app">
+  <div class="header-container">
+    <div class="header-title header-item">
+      {{title}}
+    </div>
+    <div class="nav-buttons header-item">
+      <button routerLink="/cart">Cart</button>
+      <button routerLink="/todo">Todo</button>
+    </div>
+    <div class="search-term header-item">
+      <label for="searchInput" class="search-label">Search</label>
+      <input id="searchInput" type="text" (keyup.enter)="search()"  [(ngModel)]="searchTerm"/>
+      <button id="searchButton" (click)="search()">Search</button>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

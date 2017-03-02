@@ -1,0 +1,42 @@
+.search-container {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row nowrap;
+  background-color: #1c94c4;
+
+  justify-content: flex-start;
+
+  align-items: flex-start;
+  align-content: center;
+}
+
+.search-term {
+  margin: auto;
+  padding: 5px;
+  width: 40%;
+  background-color: #00ee00;
+  flex: 0 1 auto;
+}
+
+.search-label {
+  padding: 5px;
+}
+
+.search-results-container {
+  margin: auto;
+  width: 80%;
+  padding: .5em;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

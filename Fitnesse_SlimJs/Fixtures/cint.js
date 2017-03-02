@@ -1,6 +1,5 @@
 var webdriver = require('selenium-webdriver'),
-        By = webdriver.By,
-        until = webdriver.until;
+        By = webdriver.By;
 
 
 //This is the fixture code
@@ -12,20 +11,19 @@ function CheckCalculator() {
 
     this.setFirstTerm = function(term) {
         _firstTerm = term;
-    }
+    };
 
     this.setSecondTerm = function(term) {
         _secondTerm  = term;
-    }
+    };
 
     this.setOperation = function(operation) {
         _operation = operation;
-    }
+    };
 
     this.answer = function() {
         // 'webdriver-manager start' before running this.
-        var that = this;
-        
+
         var page = new CalculatorPage();
 
         page.get();
@@ -61,30 +59,30 @@ var CalculatorPage = function() {
 
     this.get = function() {
         this.driver.get('http://hopasaurus.com/cint.html');
-    }
+    };
 
     this.setTerm = function(term) {
         this.driver.findElement(By.id(_termMap[term])).click();
-    }
+    };
         
     this.setOperation = function(operation) {
         this.driver.findElement(By.id(operation)).click();
-    }
+    };
 
     this.perform = function() {
         this.driver.findElement(By.id('equals')).click();
-    }
+    };
 
     //the last step needs to be a 'thenable'  so made a little helper for that, this would eventually be a framework provided helper once we know what pattern it will follow.
     this.getResult = function() {
         return makeThenable(this.driver, this.driver.findElement(By.id('answer')).getText());
     }
-}
+};
 
 
 var makeThenable = function(driver, managedPromise) {
     return {
-        then:function(fulfill, reject) {
+        then:function(fulfill) {
             managedPromise.then(function(output) {
                 driver.quit();
 
@@ -94,6 +92,6 @@ var makeThenable = function(driver, managedPromise) {
             });
         }
     };
-}
+};
 
 module.exports.CheckCalculator = CheckCalculator;
