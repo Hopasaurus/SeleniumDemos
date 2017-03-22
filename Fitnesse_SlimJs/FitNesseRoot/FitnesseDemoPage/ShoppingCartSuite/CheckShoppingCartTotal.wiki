@@ -1,0 +1,22 @@
+---
+Help: Check to make sure the total is displayed correctly for the shopping cart page.
+Suites: e2e
+Test
+---
+|import             |
+|generic-web-fixture|
+|mock-fixture       |
+
+
+!include -c SetupShoppingCart
+
+
+The cart total should be displayed using the normal way that people in the US display cart totals:
+
+
+!|script                   |Generic Web Script                             |
+|Go To                     |http://localhost:4200/cart                     |
+|Wait Until Element With Id|cart-total    |Is Located, Or|2000|Ms Have Past|
+|Check                     |Get Text By Id|cart-total    |$6.46            |
+|Done                                                                      |
+

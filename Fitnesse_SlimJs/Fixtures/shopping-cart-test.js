@@ -1,7 +1,8 @@
 var searchPage = require('./search-page');
+var cartPage = require('./cart-page');
 var slimDriver = require('./SlimDriver');
 
-function SearchFor(searchTerm) {
+module.exports.SearchFor = function(searchTerm) {
     this.query = function () {
         slimDriver.startTest();
 
@@ -12,7 +13,19 @@ function SearchFor(searchTerm) {
 
         return slimDriver.doneTesting(searchResult);
     }
-}
+};
 
-module.exports.SearchFor = SearchFor;
+module.exports.CheckCartItems = function() {
+    this.query = function () {
+        slimDriver.startTest();
+
+        var page = cartPage.buildCartPage();
+
+        page.get();
+
+        var searchResult = page.getCartItems();
+
+        return slimDriver.doneTesting(searchResult);
+    }
+};
 

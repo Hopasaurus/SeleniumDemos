@@ -4,24 +4,32 @@ import {Component} from "@angular/core";
   selector: 'todo',
   template: `
 <pre>
-TODO: SOON
-- check on looking at page history. (it doesn't seem to work the way I remember)
 
+- check on looking at page history. (it doesn't seem to work the way I remember)
+    - done, was looking at the wrong menu item.
+
+IN PROGRESS:
+x three amigos script and artifacts for a live 3 amigos demos.
+    - "Mockup
+
+TODO:
 - check with Matt on the terminology here:  (Acceptance)
 - a few "acceptance tests" (non e2e and run FAST)
         -- break out the order sumarizer from order.service.ts
 
+
+
+
+Not going to do this yet.
 - tests in more languages
     -- add perl or some other tests
     -- recreate the business logic from the order.service.ts and use the same table to test both
         -- reuse the table  to showcase this ability.
 
+
+
 - service virtualization (finish mock hookup)
     -- hook up mock service somewhere.
-
-
-- three amigos script and artifacts for a live 3 amigos demos.
-    - "Mockup
 
 
 TODO:
@@ -90,10 +98,26 @@ So for example:
 - mobile?
 - sauce labs integration
 - icon for the cart
+
+
+Notes:
+What needs to be installed/downloaded:
+- nodejs
+- fitnesse jar
+- npm modules (in two places, one for test framework, one for sample app)
+
+What needs to be running:
+  - sample app (to be moved to hopasaurus)
+- fitnesse
+c:\\dev\\SeleniumDemos\\Fitnesse_SlimJs> java -jar fitnesse-standalone.jar -v -p 8080
+- webdriver manager
+
+
+java -Dfile.encoding=UTF-8 -Dmockserver.logLevel=INFO -jar mockserver-netty-3.10.4-jar-with-dependencies.jar -serverPort 1080 -proxyPort 1090
+
 </pre>
 `,
 })
 export class TodoComponent {
 }
-
 

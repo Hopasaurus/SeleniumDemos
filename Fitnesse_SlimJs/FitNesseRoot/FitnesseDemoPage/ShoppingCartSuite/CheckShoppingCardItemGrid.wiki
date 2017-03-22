@@ -1,0 +1,19 @@
+---
+Help: Check to make sure the right things are in the shopping cart item grid.
+Suites: e2e
+Test
+---
+|import            |
+|shopping-cart-test|
+|mock-fixture      |
+
+
+!include -c SetupShoppingCart
+
+Check the item grid to make sure the details lines are summarized correctly:
+
+!|Query: Check Cart Items  |
+|Description|Price|Quantity|
+|Soda       |2.23 |10      |
+|Muffins    |4.23 |5       |
+

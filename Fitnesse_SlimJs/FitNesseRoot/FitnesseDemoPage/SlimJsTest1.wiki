@@ -1,14 +1,7 @@
 ---
+Help: This is some sample code used as a SlimJS sanity check.
 Test
 ---
-!define TEST_SYSTEM {slim}
-!define slim.port {9000}
-!define COMMAND_PATTERN {node "C:\Users\David Hoppe\AppData\Roaming\npm\node_modules\slimjs\src\SlimJS" %p}
-!path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures
-
-
-define COMMAND_PATTERN {SlimJS %p}
-
 
 |import      |
 |my-test-file|

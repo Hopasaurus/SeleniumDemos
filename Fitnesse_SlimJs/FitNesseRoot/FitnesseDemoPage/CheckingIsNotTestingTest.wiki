@@ -1,11 +1,16 @@
-
+---
+Help: Demonstrating the dangers of relying solely on test automation.
+---
 This is an import, it tells what file to get the fixtures from:
 
 |import|
 |cint  |
 
+This test will load this page:
+http://hopasaurus.com/cint.html
 
-This is a test fixture, it is the name of a "class" to run, the column headers are the names of functions to run with the data in from the rows:
+Then run through the prescribed tests to see if the thing is fit for use.
+
 
 |check calculator                        |
 |first term|operation|second term|answer?|

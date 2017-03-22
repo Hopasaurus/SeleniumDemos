@@ -1,16 +1,19 @@
 ---
+Help: Search for Soda
 Test
 ---
-This is an import, it tells what file to get the fixtures from:
+These are the imports that will be used for this test:
 
 |import            |
 |shopping-cart-test|
 |mock-fixture      |
 
-This fixture is showing us something important.  TODO: tell what is important.
 
-!*> foo
-Todo: move this to a reusable component and put it here:
+!*> Supporting data, collapsed so it does not detract from the test.
+
+This will be a collapsed collapsable panel.
+
+This could be moved out into a reusable component:
 
 !|Table:Setup Mock Response|
 |/items                    |
@@ -34,17 +37,10 @@ Todo: move this to a reusable component and put it here:
 |17  |White Bread   |6.24  |
 *!
 
+This test performs a search and compare sthe results to the expected results: 
 
-Run a search test:
-
-|Query: search for|erri |
+|Query: search for|Soda |
 |Description      |Price|
 |Soda             |2.23 |
 
 
-
-
-!define TEST_SYSTEM {slim}
-!define slim.port {9000}
-!define COMMAND_PATTERN {node "C:\Users\David Hoppe\AppData\Roaming\npm\node_modules\slimjs\src\SlimJS" %p}
-!path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures

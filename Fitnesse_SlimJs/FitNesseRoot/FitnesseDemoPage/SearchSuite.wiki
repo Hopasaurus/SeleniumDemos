@@ -1,0 +1,4 @@
+---
+Help: Suite for tests related to searching.
+---
+!contents -R2 -g -p -f -h

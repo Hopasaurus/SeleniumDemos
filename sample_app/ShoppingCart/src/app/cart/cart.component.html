@@ -23,10 +23,10 @@
       <th>Remove</th>
     </tr>
     <tr class="cart-detail" *ngFor="let order of order.summaryDetail">
-      <td class="cart-detailx">{{order.id}} {{order.itemId}}</td>
-      <td>{{order.item?.description}}</td>
-      <td>{{order.item?.price}}</td>
-      <td><input [(ngModel)]="order.quantity" title="quantity"></td>
+      <td class="cart-detail-ids">{{order.id}} {{order.itemId}}</td>
+      <td class="cart-detail-description">{{order.item?.description}}</td>
+      <td class="cart-detail-price">{{order.item?.price}}</td>
+      <td class="cart-detail-quantity"><input [(ngModel)]="order.quantity" title="quantity"></td>
       <td><button (click)="remove(item)">Remove</button></td>
     </tr>
   </table>

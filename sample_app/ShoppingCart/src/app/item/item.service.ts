@@ -1,12 +1,21 @@
 import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
+
 import {Observable} from 'rxjs/Rx';
 import {Item} from './item';
 
 @Injectable()
 export class ItemService {
+  constructor (private http: Http) { }
 
   //noinspection JSUnusedGlobalSymbols
   public load(id: number): Observable<Item> {
+    // return this.http.get('http://localhost:1080/items')
+    //   .map((response: Response) => {
+    //     let body = response.json();
+    //     return body.data || { };
+    //   });
+
     return Observable.of(ItemService.items.find(item => item.id === id));
   }
 

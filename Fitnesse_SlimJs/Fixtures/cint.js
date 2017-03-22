@@ -52,29 +52,26 @@ var CalculatorPage = function() {
         9: 'nine'
     };
 
-    this.driver = new webdriver.Builder()
-        .forBrowser('chrome')
-        .usingServer('http://localhost:4444/wd/hub')
-        .build();
+    framework.startTest();
 
     this.get = function() {
-        this.driver.get('http://hopasaurus.com/cint.html');
+        framework.get('http://hopasaurus.com/cint.html');
     };
 
     this.setTerm = function(term) {
-        this.driver.findElement(By.id(_termMap[term])).click();
+        framework.clickElement(By.id(_termMap[term]));
     };
         
     this.setOperation = function(operation) {
-        this.driver.findElement(By.id(operation)).click();
+        framework.clickElement(By.id(operation));
     };
 
     this.perform = function() {
-        this.driver.findElement(By.id('equals')).click();
+        framework.clickElement(By.id('equals'));
     };
 
     this.getResult = function() {
-        return framework.doneTesting(this.driver.findElement(By.id('answer')).getText());
+        return framework.doneTesting(framework.getText(By.id('answer')));
     }
 };
 

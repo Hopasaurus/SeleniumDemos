@@ -1,0 +1,31 @@
+---
+Help: Test the order summary calculator
+Suites: fast
+---
+|import               |
+|order-summary-fixture|
+
+
+This is an acceptance test for the order summary business logic.
+
+These tables could be used for testing both the front-end and back-end logic by including them in respective tests.
+
+
+
+|Order Setup                              |
+|Order Id|Order Detail Id|Item Id|Quantity|
+|1       |1              |1      |1       |
+|1       |2              |2      |10      |
+|1       |3              |1      |-1      |
+|1       |4              |3      |3       |
+|1       |5              |4      |50      |
+|1       |6              |4      |-5      |
+|1       |7              |4      |100     |
+
+
+|Query: Check Summary For Order|1       |
+|Item Id                       |Quantity|
+|1                             |0       |
+|2                             |10      |
+|3                             |3       |
+|4                             |145     |

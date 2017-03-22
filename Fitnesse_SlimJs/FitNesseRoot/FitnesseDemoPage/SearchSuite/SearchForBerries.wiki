@@ -1,0 +1,46 @@
+---
+Help: Search for berries
+Test
+---
+These are the imports that will be used for this test:
+
+|import            |
+|shopping-cart-test|
+|mock-fixture      |
+
+!***> Supporting data, collapsed so it does not detract from the test.
+
+This will be a collapsed collapsable panel.
+
+This could be moved out into a reusable component:
+
+!| Table:Setup Mock Response|
+|/items                     |
+|id  |description    |price |
+|1   |Pop            |1.23  |
+|2   |Soda           |2.23  |
+|3   |Muffins        |4.23  |
+|4   |Pancakes       |5.33  |
+|5   |Waffles        |6.42  |
+|6   |Potato         |7.52  |
+|7   |Hash brown     |8.64  |
+|8   |Corn           |9.76  |
+|9   |Beets          |7.88  |
+|10  |Turnips        |6.67  |
+|11  |YellowBerries  |5.56  |
+|12  |Greenberries   |4.45  |
+|13  |Blueberries    |3.33  |
+|14  |StrawBerries   |2.21  |
+|15  |Wheat Bread    |4.92  |
+|16  |Rye Bread      |5.83  |
+|17  |White Bread    |6.24  |
+
+*!
+This test performs a search and compare sthe results to the expected results:
+
+!|Query: search for|Berries|
+|Description       |Price  |
+|YellowBerries     |5.56   |
+|Greenberries      |4.45   |
+|Blueberries       |3.33   |
+|StrawBerries      |2.21   |

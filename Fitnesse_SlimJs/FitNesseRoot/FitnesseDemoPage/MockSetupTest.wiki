@@ -22,3 +22,10 @@ This is an import, it tells what file to get the fixtures from:
 |/matth                   |
 |foo         |bar         |
 |fizz        |buzz        |
+
+
+|Table:Setup Mock Response|
+|/yap                     |
+|prop1       |prop2       |
+|thing1      |thing2      |
+|thing1b     |thing2b     |
