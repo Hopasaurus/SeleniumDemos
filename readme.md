@@ -30,3 +30,6 @@ http://localhost:8080/SlimJsPage.CheckingIsNotTestingTest
  http://localhost:8080/SlimJsPage.CartTest1
     - this uses the sample shopping cart page.
 
+
+
+Detect what files changed in the commit and run most pertinant tests first!!

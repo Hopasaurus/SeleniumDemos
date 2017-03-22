@@ -3,7 +3,7 @@
 function Hi(){
     this.setEcho = function(str){
         this.echo = str;
-    }
+    };
 
     this.sayHi = function(){
         return "Hi! " + this.echo;
@@ -20,7 +20,7 @@ function child_process() {
 
         return {
             then:function(fulfill,reject){
-                exec(cmd, function (err, stdout, stderr) {
+                exec(cmd, function (err, stdout) {
                     if(err)
                         return reject(err);
 
@@ -37,16 +37,16 @@ module.exports.child_process=child_process;
 var eg={
     Division:function(){
         var num;
-        var denom;
+        var denominator;
 
         this.setNumerator = function(n){
             num = n;
-        }
+        };
         this.setDenominator = function(n){
-            denom=n;
-        }
+            denominator=n;
+        };
         this.quotient = function(){
-            return num/denom;
+            return num/denominator;
         }
     }
 };
@@ -61,19 +61,18 @@ function ShouldIBuyMilk() {
 
     this.setCashInWallet = function(dollars) {
         _dollars = dollars;
-    }
+    };
 
     this.setPintsOfMilkRemaining=function(pints) {
         _pints = pints;
-    }
+    };
 
     this.setCreditCard = function(valid) {
         _creditCard = "yes"===valid;
-    }
+    };
 
     this.goToStore = function() {
-        var ret=(_pints == 0 && (_dollars > 2 || _creditCard)) ? "yes" : "no";
-        return ret;
+        return (_pints == 0 && (_dollars > 2 || _creditCard)) ? "yes" : "no";
     }
 }
 
@@ -83,7 +82,7 @@ module.exports.ShouldIBuyMilk=ShouldIBuyMilk;
 function Json(){
     this.setJson = function(jsonObject){
         this.obj = jsonObject;
-    }
+    };
 
     this.XAndY = function(){
         return this.obj.x + this.obj.y;
@@ -98,25 +97,25 @@ function hoppeTest() {
 
     this.setA = function(a) {
         _done = a;
-    }
+    };
 
     this.setB = function(a) {
         _done = a;
-    }
+    };
 
     this.setC = function(a) {
         _done = a;
-    }
+    };
 
-    this.d = function(a) {
+    this.d = function () {
         return ++_done;
-    }
+    };
     
-    this.e = function(a) {
+    this.e = function() {
         return ++_done;
-    }
+    };
 
-    this.f = function(a) {
+    this.f = function() {
         return ++_done;
     }
 }

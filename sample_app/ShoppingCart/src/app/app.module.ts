@@ -10,6 +10,7 @@ import {ItemService} from './item/item.service';
 import {SearchResultsComponent} from './search/search-results.component';
 import {OrderService} from './order/order.service';
 import {LandingPageComponent} from "./landing-page/landing-page.component";
+import {TodoComponent} from "./todo/todo.component";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {LandingPageComponent} from "./landing-page/landing-page.component";
     CartComponent,
     LandingPageComponent,
     SearchResultsComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,10 @@ import {LandingPageComponent} from "./landing-page/landing-page.component";
         component: LandingPageComponent,
         pathMatch: 'full',
       },
+      {
+        path: 'todo',
+        component: TodoComponent,
+      }
     ]),
   ],
   providers: [

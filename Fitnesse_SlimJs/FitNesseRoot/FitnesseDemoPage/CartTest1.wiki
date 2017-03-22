@@ -1,0 +1,50 @@
+---
+Test
+---
+This is an import, it tells what file to get the fixtures from:
+
+|import            |
+|shopping-cart-test|
+|mock-fixture      |
+
+This fixture is showing us something important.  TODO: tell what is important.
+
+!*> foo
+Todo: move this to a reusable component and put it here:
+
+!|Table:Setup Mock Response|
+|/items                    |
+|id  |description   |price |
+|1   |Pop           |1.23  |
+|2   |Soda          |2.23  |
+|3   |Muffins       |4.23  |
+|4   |Pancakes      |5.33  |
+|5   |Waffles       |6.42  |
+|6   |Potato        |7.52  |
+|7   |Hash brown    |8.64  |
+|8   |Corn          |9.76  |
+|9   |Beets         |7.88  |
+|10  |Turnips       |6.67  |
+|11  |YellowBerries |5.56  |
+|12  |Greenberries  |4.45  |
+|13  |Blueberries   |3.33  |
+|14  |StrawBerries  |2.21  |
+|15  |Wheat Bread   |4.92  |
+|16  |Rye Bread     |5.83  |
+|17  |White Bread   |6.24  |
+*!
+
+
+Run a search test:
+
+|Query: search for|erri |
+|Description      |Price|
+|Soda             |2.23 |
+
+
+
+
+!define TEST_SYSTEM {slim}
+!define slim.port {9000}
+!define COMMAND_PATTERN {node "C:\Users\David Hoppe\AppData\Roaming\npm\node_modules\slimjs\src\SlimJS" %p}
+!path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures

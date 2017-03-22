@@ -9,7 +9,11 @@ import {Order, OrderService} from "../order/order.service";
 })
 export class CartComponent implements OnInit {
 
+  public quickAddItem: string;
+  public quickAddQty: number;
+
   private order: Order;
+
 
   constructor(private orderService: OrderService) {
   }
@@ -22,10 +26,17 @@ export class CartComponent implements OnInit {
     });
   }
 
+  //noinspection JSMethodCanBeStatic
   remove(item: Item) {
     console.log('Want to remove');
     console.log(item);
   }
+
+  quickAdd() {
+    console.log(`Want to add ${this.quickAddQty} of item: ${this.quickAddItem}`);
+  }
+
+
 }
 
 

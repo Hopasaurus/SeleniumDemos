@@ -1,6 +1,7 @@
 var webdriver = require('selenium-webdriver'),
         By = webdriver.By;
 
+var framework = require('./SlimDriver');
 
 //This is the fixture code
 function CheckCalculator() {
@@ -22,7 +23,7 @@ function CheckCalculator() {
     };
 
     this.answer = function() {
-        // 'webdriver-manager start' before running this.
+        // 'webDriver-manager start' before running this.
 
         var page = new CalculatorPage();
 
@@ -35,7 +36,6 @@ function CheckCalculator() {
         return page.getResult();
     }
 }
-
 
 // This is the page model
 var CalculatorPage = function() {
@@ -73,25 +73,9 @@ var CalculatorPage = function() {
         this.driver.findElement(By.id('equals')).click();
     };
 
-    //the last step needs to be a 'thenable'  so made a little helper for that, this would eventually be a framework provided helper once we know what pattern it will follow.
     this.getResult = function() {
-        return makeThenable(this.driver, this.driver.findElement(By.id('answer')).getText());
+        return framework.doneTesting(this.driver.findElement(By.id('answer')).getText());
     }
-};
-
-
-var makeThenable = function(driver, managedPromise) {
-    return {
-        then:function(fulfill) {
-            managedPromise.then(function(output) {
-                driver.quit();
-
-                driver.sleep(250);
-                fulfill(output);
-
-            });
-        }
-    };
 };
 
 module.exports.CheckCalculator = CheckCalculator;

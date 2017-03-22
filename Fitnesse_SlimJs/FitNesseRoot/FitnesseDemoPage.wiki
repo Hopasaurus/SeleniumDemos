@@ -1,0 +1,12 @@
+---
+Help: This is the Slim JS playground
+Suite
+---
+!contents -R2 -g -p -f -h
+
+
+
+!define TEST_SYSTEM {slim}
+!define slim.port {9000}
+!define COMMAND_PATTERN {node "C:\Users\David Hoppe\AppData\Roaming\npm\node_modules\slimjs\src\SlimJS" %p}
+!path c:\dev\SeleniumDemos\Fitnesse_SlimJs\Fixtures

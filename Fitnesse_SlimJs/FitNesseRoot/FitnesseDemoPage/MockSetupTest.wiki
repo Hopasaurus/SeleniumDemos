@@ -1,0 +1,24 @@
+---
+Help: This is a page to test the mock setup fixture.
+Suites: frameworkstuff
+---
+This is an import, it tells what file to get the fixtures from:
+
+|import      |
+|mock-fixture|
+
+
+
+|Table:Setup Mock Response|
+|/test/path2              |
+|id |name |description    |
+|1  |berry|red fruit      |
+|2  |soda |sugar and water|
+|3  |foo  |bar            |
+
+
+
+|Table:Setup Mock Response|
+|/matth                   |
+|foo         |bar         |
+|fizz        |buzz        |

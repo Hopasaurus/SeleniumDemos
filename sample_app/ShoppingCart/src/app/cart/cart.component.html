@@ -1,5 +1,19 @@
 <div class="cart">
-  <span class="selected-element">this is a cart.</span>
+  <div class="quick-add-container">
+    <div class="quick-add-box">
+      Quick add:
+      <label>
+        Item:
+        <input id="quick-add-item" [(ngModel)]="quickAddItem" (keyup.enter)="quickAdd()"/>
+      </label>
+      <label>
+        Quantity:
+        <input id="quick-add-qty" [(ngModel)]="quickAddQty" (keyup.enter)="quickAdd()"/>
+      </label>
+      <button (click)="quickAdd()">Add item</button>
+
+    </div>
+  </div>
   <table>
     <tr>
       <th>ID</th>
@@ -12,12 +26,21 @@
       <td class="cart-detailx">{{order.id}} {{order.itemId}}</td>
       <td>{{order.item?.description}}</td>
       <td>{{order.item?.price}}</td>
-      <td><input [(ngModel)]="order.quantity"></td>
+      <td><input [(ngModel)]="order.quantity" title="quantity"></td>
       <td><button (click)="remove(item)">Remove</button></td>
     </tr>
   </table>
-  <div class="cart-checkout">
-    Cart total  ${{order.total}}<br>
-    <button (click)="checkout()">Check out</button>
+<div class="order-summary-container">
+  <div class="order-summary-box">
+    <div class="cart-checkout">
+      <div>
+        Cart total  <span id="cart-total">${{order.total}}</span>
+      </div>
+      <div>
+        <button (click)="checkout()">Check out</button>
+      </div>
+    </div>
   </div>
+</div>
+
 </div>

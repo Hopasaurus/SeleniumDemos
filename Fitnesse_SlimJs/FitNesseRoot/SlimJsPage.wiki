@@ -1,6 +1,0 @@
----
-Help: This is the Slim JS playground
----
-!contents -R2 -g -p -f -h
-
-SlimJsTest1

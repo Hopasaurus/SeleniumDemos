@@ -1,0 +1,20 @@
+---
+Help: This is a test which uses the Generic Web Script fixture.
+---
+|import             |
+|generic-web-fixture|
+
+
+This is s "Script" fixture.
+
+This is using the "Generic Web Script" class which has several generic steps that can can be arranged at will to form different tests.
+
+This is a change.
+
+
+!|script                   |Generic Web Script                             |
+|Go To                     |http://localhost:4200/cart                     |
+|Wait Until Element With Id|cart-total    |Is Located, Or|2000|Ms Have Past|
+|Check                     |Get Text By Id|cart-total    |$6.46            |
+|Done                                                                      |
+

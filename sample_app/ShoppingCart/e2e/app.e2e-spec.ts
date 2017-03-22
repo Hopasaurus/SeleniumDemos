@@ -1,10 +1,10 @@
-import { ShippingCartPage } from './app.po';
+import { ShoppingCartPage } from './app.po';
 
 describe('shipping-cart App', () => {
-  let page: ShippingCartPage;
+  let page: ShoppingCartPage;
 
   beforeEach(() => {
-    page = new ShippingCartPage();
+    page = new ShoppingCartPage();
   });
 
   it('should display message saying app works', () => {
